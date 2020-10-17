@@ -1,0 +1,53 @@
+body{
+	width: 1300px;
+}
+
+th{
+	margin:0px;
+	padding:0px;
+}
+th.id{
+	width:3em;
+}
+th.linkssID{
+	width:4em;
+}
+th.count{
+	width:3em;
+}
+th.path{
+	width:40em;
+}
+th.tagname{
+	width:20em
+}
+
+.bodyfull{
+	width:95%;
+}
+
+.yokonarabi{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+}
+
+.kuuhaku100{
+	width: 100px;
+}
+
+iframe.iframe_kotei{
+	/* 昔のflaot? */
+	display: flex;
+	position: fixed;
+	/* top: 0;
+	right:0; */
+	padding: 10px;
+	background: #fff;
+}
+
+.anchor{
+    display: block;
+    padding-top: 70px;
+    margin-top: -70px;
+}
