@@ -1,27 +1,31 @@
-.sidebar{
-	flex: 0 0 200px;
+.content{
 	display: flex;
+}
+
+nav{
+	flex: 0 0 200px;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 10px;
 	left: 0px;
 	height: 0;
 }
-.main{
-	min-width:0;
+
+section{
 }
-.content{
-	display: flex;
+
+article{
+	min-width: 500px;
 }
-.header{
-	display: flex;
+
+header{
 	position: fixed;
 	top: 0;
 	right:0;
 	padding: 10px;
 }
-.footer{
-	display: flex;
+
+footer{
 	position: fixed;
 	bottom: 0;
 	left:10;
@@ -29,7 +33,7 @@
 
 pre.overx{
 	overflow-x:scroll;
-	background:#f0f0f0;
-	flex:2;
-	width: 100vh; /* これを追加 */
+	background:#f0f0f0;;
+	width: 100vh;
+	position: relative;
 }
