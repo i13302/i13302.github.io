@@ -1,14 +1,27 @@
-.content{
+.contents{
 	display: flex;
+	max-width: 1100px;
 }
 
 nav{
-	flex: 0 0 200px;
+	flex: 0 0 150px;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 10px;
 	left: 0px;
+	margin-right:20px;
 	height: 0;
+}
+
+nav ul li a{
+	font-size: large;
+}
+
+nav ul{
+	list-style-type: none;
+	text-align-last: justify;
+	text-align: justify;
+	text-justify: inter-ideograph;
 }
 
 section{
@@ -16,6 +29,7 @@ section{
 
 article{
 	min-width: 500px;
+	margin: 0 auto;
 }
 
 header{
@@ -32,8 +46,41 @@ footer{
 }
 
 pre.overx{
-	overflow-x:scroll;
+	white-space: pre-wrap ;
 	background:#f0f0f0;;
 	width: 100vh;
-	position: relative;
+}
+
+ul.tb00{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul.disc{
+	list-style-type: disc;
+}
+
+li.none{
+	list-style-type: none;
+}
+
+li.disc{
+	list-style-type: disc;
+}
+
+li.circle{
+	list-style-type: circle;
+}
+
+li.square{
+	list-style-type: square;
+}
+
+h3.bottom0{
+	margin-bottom: 0;
+}
+
+span.me{
+	color:red;
+	font-weight: bold;
 }
