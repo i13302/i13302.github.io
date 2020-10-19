@@ -84,3 +84,8 @@ span.me{
 	color:red;
 	font-weight: bold;
 }
+
+span.mgright{
+	color: green;
+	margin-right: 0.5em;
+}

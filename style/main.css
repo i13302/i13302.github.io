@@ -8,24 +8,17 @@ body{
 	}
 }
 
-th{
-	margin:0px;
-	padding:0px;
+.center{
+	text-align: center;
 }
-th.id{
-	width:3em;
+
+.left{
+	text-align: left;;
 }
-th.linkssID{
-	width:4em;
-}
-th.count{
-	width:3em;
-}
-th.path{
-	width:40em;
-}
-th.tagname{
-	width:20em
+
+.pad1em{
+	padding-left:1em;
+	padding-right:1em;
 }
 
 .bodyfull{
