@@ -11,11 +11,20 @@ nav{
 	height: 0;
 }
 
+nav ul li a{
+	font-size: large;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
 section{
 }
 
 article{
 	min-width: 500px;
+	margin: 0 auto;
 }
 
 header{
@@ -32,8 +41,36 @@ footer{
 }
 
 pre.overx{
-	overflow-x:scroll;
+	white-space: pre-wrap ;
 	background:#f0f0f0;;
 	width: 100vh;
-	position: relative;
+}
+
+ul.tb00{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul.disc{
+	list-style-type: disc;
+}
+
+li.none{
+	list-style-type: none;
+}
+
+li.disc{
+	list-style-type: disc;
+}
+
+li.circle{
+	list-style-type: circle;
+}
+
+li.square{
+	list-style-type: square;
+}
+
+h3.bottom0{
+	margin-bottom: 0;
 }
