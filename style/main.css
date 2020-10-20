@@ -36,11 +36,8 @@ body{
 }
 
 iframe.iframe_kotei{
-	/* 昔のflaot? */
 	display: flex;
 	position: fixed;
-	/* top: 0;
-	right:0; */
 	padding: 10px;
 	background: #fff;
 }
