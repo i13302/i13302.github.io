@@ -5,7 +5,8 @@ body{
 
 @media screen and (max-width:1000px) { 
 	body{
-		margin-left:0;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
