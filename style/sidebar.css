@@ -11,30 +11,10 @@ nav{
 	position: sticky;
 	padding-left: 20px;
 	padding-right: 20px;
-	background-color: white;
 	align-self: baseline;
 	top: 0;
-}
-
-
-@media screen and (max-width:1000px) { 
-	nav{
-		position: fixed;
-		background-color: white;
-		z-index: 10;
-	}
-
-	nav ul{
-		display:flex;
-	}
-	
-	nav ul li{
-		margin-right:10px;
-	}
-	
-	section{
-		margin-top: 100px;
-	}
+	height: 100vh;
+	background-color: white;
 }
 
 nav ul li a{
@@ -49,12 +29,14 @@ nav ul{
 	padding-left: 0px;
 }
 
-section{
+article{
+	margin: 0 auto;
+	width: 100vh;
 }
 
-article{
-	min-width: 500px;
-	margin: 0 auto;
+section{
+	margin-left: 10px;
+	background-color: #EFEFEF;
 }
 
 header{
@@ -117,4 +99,39 @@ span.mgright{
 
 span.mwhite{
 	color:white;
+}
+
+@media screen and (max-width:1000px) { 
+	.contents{
+		margin-top: 0;
+		margin-bottom: 0;
+		max-width: initial;
+		display: block;
+	}
+	
+	nav{
+		flex: 0;
+		position: fixed;
+		height: auto;
+		width: 100vh;
+		z-index: 10;
+	}
+
+	nav ul{
+		display:flex;
+	}
+	
+	nav ul li{
+		margin-right:10px;
+	}
+	
+	section{
+		margin-top: 100px;
+		margin-left: 0;
+	}
+	
+	article{
+		margin: 0;
+		min-width: 600px;
+	}
 }
