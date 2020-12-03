@@ -17,10 +17,15 @@
 		<article>
 			<section>
 				<h1>SLPアドベントカレンダー2020</h1>
-
-				<p>この記事は，<a href='https://adventar.org/calendars/5402'>SLP KBIT Advent Calendar 2020 - Adventar </a> の5日目(12月5日)の記事です．</p>
+				<h2>はじめに</h2>
+				<p>この記事は，<a href='https://adventar.org/calendars/5402'>SLP KBIT Advent Calendar 2020 - Adventar</a> の5日目(12月5日)の記事です．</p>
 				<p>今回は，自分のHPで紹介します．<br>
 					なかなかにシュールでごめんなさい．</p>
+				<p>本日は，GitHub ActionsとDockerfileを用いたLaTeXのビルド方法を紹介します．</p>
+				<p>今までの日を見ますと，皆様かなり本格的な内容を紹介していますね．<br>
+				本日紹介する内容は，技術的にはそこまで大したものではありません．<br>
+				ただ，実際に使って便利だったので紹介する感じです．</p>
+				
 			</section>
 		</article>
 	</div>
