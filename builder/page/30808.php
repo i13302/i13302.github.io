@@ -20,8 +20,7 @@
 
 				<p>この記事は，<a href='https://adventar.org/calendars/5402'>SLP KBIT Advent Calendar 2020 - Adventar </a> の5日目(12月5日)の記事です．</p>
 				<p>今回は，自分のHPで紹介します．<br>
-					なかなかにシュールでごめんなさい．<br>
-					実は別の名前で去年(2019年)もやっていますので，探して見てください</p>
+					なかなかにシュールでごめんなさい．</p>
 			</section>
 		</article>
 	</div>
