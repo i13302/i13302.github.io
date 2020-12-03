@@ -1,12 +1,12 @@
 .contents{
 	display: flex;
-	max-width: 1100px;
+	max-width: 1200px;
 	margin-top: -10px;
 	margin-bottom: -10px;
 }
 
 nav{
-	flex: 0 0 150px;
+	flex: 0 0 200px;
 	position: -webkit-sticky;
 	position: sticky;
 	padding-left: 20px;
