@@ -8,6 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="style/sidebar.css">
 	<link rel="stylesheet" type="text/css" href="style/object.css">
 	<meta name="viewport" content="width=device-width">
+	<style type=text/css>
+		code{
+			background-color: wheat;
+			padding-left:0.5em;
+			padding-right: 0.5em;
+		}
+	</style>
 </head>
 
 <body>
@@ -56,8 +63,13 @@
 				<h2>できること</h2>
 				<p>さて，このシステム？では何ができるのでしょうか．<br>以下のように実際に執筆する流れで説明します．</p>
 				<h3>執筆</h3>
-				<p>執筆ブランチ(<code class=word>Chap/**</code>)で章ごとに執筆します．<p>
-				
+				<p>執筆ブランチ(<code>Chap/**</code>)で章ごとに執筆します．<br>
+				執筆のcommitに一区切りが付くとpushします．<br>
+				pushするとGitHub Actionsが作動し，ビルドします．<br>
+				これにより執筆ブランチ毎のビルドの可否が担保されます．</p>
+				<h3>結合</h3>
+				<p>結合ブランチ(<code>develop</code></p>
+					
 			</section>
 		</article>
 	</div>
