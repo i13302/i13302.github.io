@@ -49,3 +49,7 @@ iframe.iframe_kotei{
 	padding-top: 70px;
 	margin-top: -70px;
 }
+
+h1,h2,h3{
+	margin-left:1em;
+}
