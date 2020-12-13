@@ -31,7 +31,7 @@ nav ul{
 
 article{
 	margin: 0 auto;
-	width: 100vh;
+	min-width: 1000px;
 	margin-left: 5px;
 	padding-left: 1em;
 	margin-right: 5px;
@@ -106,9 +106,10 @@ span.mwhite{
 		margin-top: 0;
 		margin-bottom: 0;
 		margin-left: -10px;
+		margin-right: -10px;
 		max-width: initial;
 		display: block;
-		min-width: 600px;
+		min-width: 500px;
 	}
 	
 	nav{
@@ -126,7 +127,9 @@ span.mwhite{
 	nav ul li{
 		margin-right:10px;
 	}
-	
+	article{
+		min-width: 0;
+	}
 	section{
 		margin: 0;
 	}
