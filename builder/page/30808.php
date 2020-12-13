@@ -20,7 +20,8 @@
 		
 		pre.srccode{
 			margin-left: 2em;
-			margin-right: 2em;
+			margin-right: 10em;
+			background-color: white;
 		}
 		
 		ol.list_parentheses{
@@ -150,6 +151,8 @@
 				<code class=word>push.yml</code>を見てください．<p>
 				<p><a href='https://github.com/i13302/latex-actions/blob/644277ecfd564d9255172ff4919bdf1b65bbf03a/.github/workflows/push.yml#L6'>6行目</a>から以下のように記述されています．<br>
 				まあ，なんとなくわかるのですが，単にどのブランチにどうされたときにイベントが走るのか記述されています．</p>
+				
+				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/workflows/push.yml'>push.yml</a></p>
 <pre class="prettyprint srccode">
 <code>on:
 	push:
@@ -161,6 +164,8 @@
 				<p><code class=word>runs-on</code>では，どのような環境で動作するか決めています．<br>
 				ここでは，ubuntuの最新版にしていますが，macOSやWindows Serverも選べるようです．<br>
 				(<a href='https://docs.github.com/ja/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on'>GitHub Actionsのワークフロー構文 - GitHub Docs </a>)</p>
+
+				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/workflows/push.yml'>push.yml</a></p>
 <pre class="prettyprint srccode">
 <code>jobs:
 	# This workflow contains a single job called "build"
@@ -173,8 +178,8 @@
 				まず，<code class=word>actions/checkout@v2</code>は，まあ正直おまじないです．<br>
 				プロジェクトのソースコードをチェックアウトして使用することができます．<br>
 				ブランチの指定やcommit，pushをすることもできます．</p>
-				次の，<code class=word>./.github/docker</code>は指定パスにある，<code class=word>action.yml</code>ファイルを実行します．<br>
-				即ち，<a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/action.yml'><code class=word>./github/docker/action.yml</code></a>ですね．</p>
+				
+				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/workflows/push.yml'>push.yml</a></p>
 <pre class="prettyprint srccode">
 <code>	steps:
 		# Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -182,13 +187,26 @@
 		uses: actions/checkout@v2
 		- name: Build Step
 		uses: ./.github/docker</code></pre>
+		
+				<p>次の，<code class=word>./.github/docker</code>は指定パスにある，<code class=word>action.yml</code>ファイルを実行します．<br>
+				即ち，<code class=word>./github/docker/action.yml</code>ですね．</p>
 
-				<h4>actions.ymlの中身</h4>
+				<h4><a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/action.yml'>actions.yml</a>の中身</h4>
 				<p>ここでは，<code class=word>runs</code>の中身が実行されます．<br>
 				Dockerを使うときには，<code class=word>using: 'docker'</code>を指定し，Docker イメージを指定します．<br>
-				コマンドライン引数は，<code class=word>args</code>で渡すことができます．<br>
-				また，Docker以外にも，JavaScriptや複合実行ができるようです．<br>
+				コマンドライン引数は，<code class=word>args</code>で渡すことができます．</p>
+				<p>ここでは，LaTeXをビルドするイメージを<a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/Dockerfile'>Dockerfile</a>と<a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/entrypoint.sh'>entrypoint.sh</a>で書いています．</p>
+				
+				<p>また，Docker以外にも，JavaScriptや複合実行ができるようです．<br>
 				(<a href='https://docs.github.com/ja/enterprise-server@2.22/actions/creating-actions/metadata-syntax-for-github-actions#javascript%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEruns'>GitHub Actionsのメタデータ構文 - GitHub Docs </a>)</p>
+
+				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/action.yml'>action.yml</a></p>
+<pre class="prettyprint srccode">
+<code>runs:
+	using: 'docker'
+	image: 'Dockerfile'
+	args: 
+		- "paper.tex"</code></pre>
 				
 				<p>あとは，普通にDockerfileがDocker ビルドされて，イメージを起動します．</p>
 				
