@@ -51,9 +51,26 @@ iframe.iframe_kotei{
 	margin-top: -70px;
 }
 
-h1,h2,h3{
+h1,h2,h3,h4{
 	margin-left:1em;
 }
+
+h3{
+	counter-increment: h3number;
+}
+h3::before{
+	content:counter(h2number)"-" counter(h3number)". ";
+}
+
+h2{
+	counter-increment: h2number;
+	counter-reset: h3number;
+}
+h2::before{
+	content:counter(h2number)". ";
+}
+
+
 
 img{
 	max-width: 70%;

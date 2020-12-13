@@ -28,7 +28,7 @@ function newfile(){
 # 目次を生成
 function table_of_contents(){
 	mkdir -p parts/table_of_contents
-	echo '<ul>' > parts/table_of_contents/$1.php
+	echo '<ol>' > parts/table_of_contents/$1.php
 	for _h2 in $(cat $1.php |\
 		grep -i '<h2>' |\
 		sed -e 's/<[^>]*>//g' |\
@@ -36,7 +36,7 @@ function table_of_contents(){
 	do
 		echo '<li>'$_h2'</li>' >> parts/table_of_contents/$1.php
 	done
-	echo '</ul>' >> parts/table_of_contents/$1.php
+	echo '</ol>' >> parts/table_of_contents/$1.php
 }
 
 
