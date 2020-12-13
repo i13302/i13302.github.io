@@ -5,6 +5,7 @@ body{
 
 @media screen and (max-width:1000px) { 
 	body{
+		padding-top: 3em;
 		margin-left: 0;
 		margin-right: 0;
 	}
@@ -57,4 +58,8 @@ h1,h2,h3{
 img{
 	max-width: 70%;
 	max-height: 50%;
+}
+
+p{
+	letter-spacing: normal;
 }
