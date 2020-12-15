@@ -52,11 +52,19 @@ iframe.iframe_kotei{
 }
 
 h1,h2,h3,h4{
-	margin-left:1em;
+	margin-left: -15px;
+}
+
+h4{
+	counter-increment: h4number;
+}
+h4::before{
+	content: "["counter(h4number)"] ";
 }
 
 h3{
 	counter-increment: h3number;
+	counter-reset: h4number;
 }
 h3::before{
 	content:counter(h2number)"-" counter(h3number)". ";
@@ -69,7 +77,6 @@ h2{
 h2::before{
 	content:counter(h2number)". ";
 }
-
 
 
 img{
