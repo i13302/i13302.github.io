@@ -22,6 +22,7 @@
 			margin-left: 2em;
 			margin-right: 10em;
 			background-color: white;
+			white-space: pre-wrap;
 		}
 		
 		ol.list_parentheses{
@@ -148,7 +149,24 @@
 				
 				<h2>仕組み</h2>
 				<p>さて，仕組み...というか，どのように動作しているかを述べます．</p>
-				<p><a href=https://github.com/i13302/latex-actions/tree/master/.github><code class=word>./github</code>ディレクトリ</a>を見てみてください．<br>
+				
+				<p>まず，ディレクトリはこのような構成になっています．</p>
+<pre class=srccode>
+<code>├── .github
+│   ├── docker
+│   │   ├── Dockerfile
+│   │   ├── action.yml
+│   │   └── entrypoint.sh
+│   ├── scripts
+│   │   └── paper_release.sh
+│   └── workflows
+│       ├── push.yml
+│       └── release.yml
+├── .gitignore
+├── README.md
+└── paper.tex</code></pre>
+				
+				<p>それではまず，<a href=https://github.com/i13302/latex-actions/tree/master/.github><code class=word>./github</code>ディレクトリ</a>を見てみてください．<br>
 				3つのサブディレクトリ(<code class=word>docker</code><code class=word>scripts</code><code class=word>workflows</code>)があります．</p>
 				<p>Actionsはイベントが起こったときに，このディレクトリ内を探索します．</p>
 				<p>ここで，このプロジェクトはいくつのイベントで作成されているか考えると，以下の2つですね．</p>
@@ -162,7 +180,8 @@
 				<p>では，1つ目について見ましょう．<br>
 				<code class=word>push.yml</code>を見てください．<p>
 				<p><a href='https://github.com/i13302/latex-actions/blob/644277ecfd564d9255172ff4919bdf1b65bbf03a/.github/workflows/push.yml#L6'>6行目</a>から以下のように記述されています．<br>
-				まあ，なんとなくわかるのですが，単にどのブランチにどうされたときにイベントが走るのか記述されています．</p>
+				まあ，なんとなくわかるのですが，単にどのブランチにどうされたときにイベントが走るのか記述されています．<br>
+				ここでは，<code class=word>Chap/**</code>ブランチと<code class=word>develop</code>ブランチに，pushされたときに，走るようです．</p>
 				
 				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/workflows/push.yml'>push.yml</a></p>
 <pre class="prettyprint srccode">
@@ -223,7 +242,7 @@
 				<p>あとは，普通にDockerfileがDocker ビルドされて，イメージを起動します．</p>
 				
 				<p>Dockerfileを敢えて使っている理由は，単にローカルのビルド環境と合わせやすいからです．<br>
-				また，目的とする卒論や学会などに合わせてカスタムした，bstファイルやstyを梱包するときは，Dockerファイルをカスタムします．．<br>
+				また，目的とする卒論や学会などに合わせてカスタムしたbstファイルやstyを梱包するときは，Dockerファイルをカスタムします．<br>
 				まあ，詳しくは省略します．気が向いたらそのうち追記するかも...
 				</p>
 				
@@ -231,17 +250,52 @@
 				
 				<h3>提出ブランチでのpush時のビルドとリリース作成</h3>
 				<p>では，今度は2つ目のイベントについて考えてみましょう．<br>
-				<code class=word>release.yml</code>を見てください．<p>
+				<code class=word>release.yml</code>を見てください．</p>
+				
+				<p><a href='https://github.com/i13302/latex-actions/blob/644277ecfd564d9255172ff4919bdf1b65bbf03a/.github/workflows/release.yml#L7'>7行目</a>をみると，今度は，<code class=word>master</code>ブランチにpushしたときに動作するようです．<br>
+				また，<a href='https://github.com/i13302/latex-actions/blob/644277ecfd564d9255172ff4919bdf1b65bbf03a/.github/workflows/release.yml#L25'>25行目</a>にて，なにやらシェルスクリプトを実行しているようです．<br>
+				環境変数として，<code class=word>GitHub Token</code>を与えていますね．</p>
+				
+				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/workflows/release.yml'>release.yml</a></p>
+<pre class="prettyprint srccode">
+<code>		- name: Release
+		env:
+			GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+		run: chmod +x ./.github/scripts/paper_release.sh && ./.github/scripts/paper_release.sh</code></pre>
+				
+				<p>実行しているシェルスクリプト<a href='https://github.com/i13302/latex-actions/blob/master/.github/scripts/paper_release.sh'>paper_release.sh</a>の中身は，PDFファイルを添付して，Releaseを発行するようになっています．<br>
+				<code class=word>GitHub Token</code>はリリースを発行するために，使っているのですね．</p>
+				
+				<p><a href='https://github.com/i13302/latex-actions/blob/master/.github/scripts/paper_release.sh'>paper_release.sh</a></p>
+<pre class="prettyprint srccode">
+<code># create release
+res=`curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://api.github.com/repos/$GITHUB_REPOSITORY/releases \
+-d "
+{
+	\"tag_name\": \"v$TODAY\",
+	\"target_commitish\": \"$GITHUB_SHA\",
+	\"name\": \"v$TODAY\",
+	\"draft\": false,
+	\"prerelease\": false
+}"`
+
+# extract release id
+rel_id=`echo ${res} | jq '.id'`
+
+# upload built pdf
+curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/${rel_id}/assets?name=\"${TODAY}_$PDFFILE``\"\
+	--header 'Content-Type: application/pdf'\
+	--upload-file $PDFFILE</code></pre>
+				
+				<p>このように，<code class=word>master</code>ブランチにpushされたとき，シェルスクリプトが動作し，PDFを添付したReleaseが発行される仕組みとなっています．</p>
+				
+				<h2>おわりに</h2>
+				さて，
+				
 				
 			</section>
 		</article>
 	</div>
-	<header>
-		header
-	</header>
-	<footer>
-		footer
-	</footer>
 </body>
 
 </html>
