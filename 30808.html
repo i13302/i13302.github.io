@@ -69,6 +69,7 @@
 <li>概要</li>
 <li>できること</li>
 <li>仕組み</li>
+<li>おわりに</li>
 </ol>
 			</section>
 			<section>
@@ -290,7 +291,17 @@ curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/
 				<p>このように，<code class=word>master</code>ブランチにpushされたとき，シェルスクリプトが動作し，PDFを添付したReleaseが発行される仕組みとなっています．</p>
 				
 				<h2>おわりに</h2>
-				さて，
+				<p>さて，今回は，<a href='https://adventar.org/calendars/5402'>SLP KBIT Advent Calendar 2020 - Adventar</a> の5日目として，論文執筆を目的としたGitHub Actionsを提案しました．</p>
+				
+				<p>論文執筆には，以下の2つのイベントがあると考えました．</p>
+				<ol>
+					<li>執筆ブランチと結合ブランチへのpush時のビルド(push.yml)</li>
+					<li>提出ブランチでのpush時のビルドとリリース作成(release.yml)</li>
+				</ol>
+				<p>この2つのイベントに応じたActionsを作成しました．</p>
+				
+				<p>以上で数日遅れのアドカレ5日目をおわります．<br>
+				おまたせして申し訳ございません．</p>
 				
 				
 			</section>
