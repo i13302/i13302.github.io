@@ -2,12 +2,7 @@
 <html>
 
 <head>
-	<meta charset='utf-8'>
-	<title>i13302/SLPアドベントカレンダー2020</title>
-	<link rel="stylesheet" type="text/css" href="style/main.css">
-	<link rel="stylesheet" type="text/css" href="style/sidebar.css">
-	<link rel="stylesheet" type="text/css" href="style/object.css">
-	<meta name="viewport" content="width=device-width">
+<?php include('./parts/head.php'); load_head('SLPアドベントカレンダー2020');?>
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"?skin=sunburst"></script>
 	<style type=text/css>
 		code.word{
