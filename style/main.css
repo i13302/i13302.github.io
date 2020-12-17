@@ -1,9 +1,10 @@
 body{
-	margin-left:15%;
+	margin: 0 auto;
 	background-color: #0b633f;
+	max-width: 1200px;
 }
 
-@media screen and (max-width:1000px) { 
+@media screen and (max-width:900px) { 
 	body{
 		padding-top: 3em;
 		margin-left: 0;
