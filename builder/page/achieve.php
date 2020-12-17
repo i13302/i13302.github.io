@@ -2,22 +2,12 @@
 <html>
 
 <head>
-	<meta charset='utf-8'>
-	<meta name="viewport" content="width=device-width">
-	<title>i13302/実績一覧</title>
-	<link rel="stylesheet" type="text/css" href="style/main.css">
-	<link rel="stylesheet" type="text/css" href="style/sidebar.css">
-	<link rel="stylesheet" type="text/css" href="style/object.css">
+<?php include('./parts/head.php'); load_head('実績一覧');?>
 </head>
 
 <body>
 	<div class=contents>
-<nav><ul>
-<li><a href=index.html>index</a></li>
-<li><a href=achieve.html>achieve</a></li>
-<li><a href=project.html>project</a></li>
-<li><a href=30808.html>30808</a></li>
-</ul></nav>
+<?php include('./parts/nav.php'); ?>
 
 		<article>
 			<section>
