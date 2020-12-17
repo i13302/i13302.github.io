@@ -7,9 +7,10 @@ ROOTPATH='../..'
 
 # PHPファイルを基にHTMLファイルを生成
 function build(){
+	mkdir -p $ROOTPATH/docs
 	for pf in ${PAGEFILE[@]}
 	do
-		php $pf.php > $ROOTPATH/$pf.html 
+		php $pf.php > $ROOTPATH/docs/$pf.html 
 	done
 }
 
@@ -17,7 +18,7 @@ function build(){
 function clean(){
 	for pf in ${PAGEFILE[@]}
 	do
-		mv $ROOTPATH/$pf.html `mktemp`
+		mv $ROOTPATH/docs/$pf.html `mktemp`
 	done
 }
 

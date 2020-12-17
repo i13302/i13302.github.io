@@ -1,4 +1,4 @@
-index
-achieve
-project
-30808
+index	トップページ
+achieve	実績一覧
+project	制作物
+30808	SLPアドカレ2020
