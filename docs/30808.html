@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link rel="stylesheet" type="text/css" href="style/sidebar.css">
 	<link rel="stylesheet" type="text/css" href="style/object.css">
+	<meta charset="UTF-8">
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"?skin=sunburst"></script>
 	<style type=text/css>
 		code.word{
@@ -165,7 +166,7 @@
 ├── README.md
 └── paper.tex</code></pre>
 				
-				<p>それではまず，<a href=https://github.com/i13302/latex-actions/tree/master/.github><code class=word>./github</code>ディレクトリ</a>を見てみてください．<br>
+				<p>それではまず，<a href=https://github.com/i13302/latex-actions/tree/master/.github><code class=word>.github</code>ディレクトリ</a>を見てみてください．<br>
 				3つのサブディレクトリ(<code class=word>docker</code><code class=word>scripts</code><code class=word>workflows</code>)があります．</p>
 				<p>Actionsはイベントが起こったときに，このディレクトリ内を探索します．</p>
 				<p>ここで，このプロジェクトはいくつのイベントで作成されているか考えると，以下の2つですね．</p>
@@ -219,7 +220,7 @@
 		uses: ./.github/docker</code></pre>
 		
 				<p>次の，<code class=word>./.github/docker</code>は指定パスにある，<code class=word>action.yml</code>ファイルを実行します．<br>
-				即ち，<code class=word>./github/docker/action.yml</code>ですね．</p>
+				即ち，<code class=word>.github/docker/action.yml</code>ですね．</p>
 
 				<h4><a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/action.yml'>actions.yml</a>の中身</h4>
 				<p>ここでは，<code class=word>runs</code>の中身が実行されます．<br>
@@ -291,16 +292,31 @@ curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/
 				<h2>おわりに</h2>
 				<p>さて，今回は，<a href='https://adventar.org/calendars/5402'>SLP KBIT Advent Calendar 2020 - Adventar</a> の5日目として，論文執筆を目的としたGitHub Actionsを提案しました．</p>
 				
-				<p>論文執筆には，以下の2つのイベントがあると考えました．</p>
+				<p> 論文執筆には，3つの課題があると考えました．</p>
+				<ol class=list_parentheses>
+					<li>現在の最新版はビルドできるのか．</li>
+					<li>第2著者が書いた部分はビルドできるのか．</li>
+					<li>論文PDF(生成物)が欲しいとき，プロジェクトをCloneしてビルドするのが面倒．</li>
+				</ol>
+				
+				<p>その課題には，以下の2つのイベントがあると考えました．</p>
 				<ol>
 					<li>執筆ブランチと結合ブランチへのpush時のビルド(push.yml)</li>
 					<li>提出ブランチでのpush時のビルドとリリース作成(release.yml)</li>
 				</ol>
-				<p>この2つのイベントに応じたActionsを作成しました．</p>
+				
+				<p>今回は，2つのイベントに応じたActionsを作成し，以下のように課題を解決しました．</p>
+				<ol class=list_parentheses>
+					<li>ActionsがPassしているので安全！</li>
+					<li>GitがマージしてActionsがPassしているので安全！</li>
+					<li>Actionsで勝手にビルドして提出！</li>
+				</ol>
+				
+				<p>このシステムは，DICOMO2020と学内論文の2件の論文執筆に使われました．</p>
 				
 				<p>以上で数日遅れのアドカレ5日目をおわります．<br>
-				おまたせして申し訳ございません．</p>
-				
+				おまたせして申し訳ございません．<br>
+				引き続き，SLPのアドカレをよろしくおねがいします．</p>
 				
 			</section>
 		</article>

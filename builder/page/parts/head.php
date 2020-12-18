@@ -7,6 +7,7 @@ function load_head($title){
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link rel="stylesheet" type="text/css" href="style/sidebar.css">
 	<link rel="stylesheet" type="text/css" href="style/object.css">
+	<meta charset="UTF-8">
 <?php
 }
 ?>
