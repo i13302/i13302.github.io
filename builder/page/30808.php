@@ -149,7 +149,7 @@
 ├── README.md
 └── paper.tex</code></pre>
 				
-				<p>それではまず，<a href=https://github.com/i13302/latex-actions/tree/master/.github><code class=word>./github</code>ディレクトリ</a>を見てみてください．<br>
+				<p>それではまず，<a href=https://github.com/i13302/latex-actions/tree/master/.github><code class=word>.github</code>ディレクトリ</a>を見てみてください．<br>
 				3つのサブディレクトリ(<code class=word>docker</code><code class=word>scripts</code><code class=word>workflows</code>)があります．</p>
 				<p>Actionsはイベントが起こったときに，このディレクトリ内を探索します．</p>
 				<p>ここで，このプロジェクトはいくつのイベントで作成されているか考えると，以下の2つですね．</p>
@@ -203,7 +203,7 @@
 		uses: ./.github/docker</code></pre>
 		
 				<p>次の，<code class=word>./.github/docker</code>は指定パスにある，<code class=word>action.yml</code>ファイルを実行します．<br>
-				即ち，<code class=word>./github/docker/action.yml</code>ですね．</p>
+				即ち，<code class=word>.github/docker/action.yml</code>ですね．</p>
 
 				<h4><a href='https://github.com/i13302/latex-actions/blob/master/.github/docker/action.yml'>actions.yml</a>の中身</h4>
 				<p>ここでは，<code class=word>runs</code>の中身が実行されます．<br>
