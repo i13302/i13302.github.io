@@ -292,16 +292,31 @@ curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/
 				<h2>おわりに</h2>
 				<p>さて，今回は，<a href='https://adventar.org/calendars/5402'>SLP KBIT Advent Calendar 2020 - Adventar</a> の5日目として，論文執筆を目的としたGitHub Actionsを提案しました．</p>
 				
-				<p>論文執筆には，以下の2つのイベントがあると考えました．</p>
+				<p> 論文執筆には，3つの課題があると考えました．</p>
+				<ol class=list_parentheses>
+					<li>現在の最新版はビルドできるのか．</li>
+					<li>第2著者が書いた部分はビルドできるのか．</li>
+					<li>論文PDF(生成物)が欲しいとき，プロジェクトをCloneしてビルドするのが面倒．</li>
+				</ol>
+				
+				<p>その課題には，以下の2つのイベントがあると考えました．</p>
 				<ol>
 					<li>執筆ブランチと結合ブランチへのpush時のビルド(push.yml)</li>
 					<li>提出ブランチでのpush時のビルドとリリース作成(release.yml)</li>
 				</ol>
-				<p>この2つのイベントに応じたActionsを作成しました．</p>
+				
+				<p>今回は，2つのイベントに応じたActionsを作成し，以下のように課題を解決しました．</p>
+				<ol class=list_parentheses>
+					<li>ActionsがPassしているので安全！</li>
+					<li>GitがマージしてActionsがPassしているので安全！</li>
+					<li>Actionsで勝手にビルドして提出！</li>
+				</ol>
+				
+				<p>このシステムは，DICOMO2020と学内論文の2件の論文執筆に使われました．</p>
 				
 				<p>以上で数日遅れのアドカレ5日目をおわります．<br>
-				おまたせして申し訳ございません．</p>
-				
+				おまたせして申し訳ございません．<br>
+				引き続き，SLPのアドカレをよろしくおねがいします．</p>
 				
 			</section>
 		</article>
