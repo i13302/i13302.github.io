@@ -56,7 +56,18 @@ function create(){
 	
 }
 
+# help
+function help(){
+	echo 'help function'
+	echo 'Usage:'
+}
+
 
 # echo $PAGEFILE
 cd page
-$@
+if [ -z $@ ]
+then 
+	help
+else
+	$@
+fi
