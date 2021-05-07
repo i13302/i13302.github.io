@@ -62,12 +62,16 @@ function help(){
 	echo 'Usage:'
 }
 
+function empty(){
+	echo 'empty function for test.'
+}
+
 
 # echo $PAGEFILE
 cd page
-if [ -z $@ ]
-then 
-	help
-else
+if [ type -a "$@" >/dev/null 2>&1 ]
+then
 	$@
+else
+	help
 fi
