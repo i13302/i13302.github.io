@@ -15,10 +15,10 @@
 		</article>
 	</div>
 	<header>
-		header
+		<!-- header -->
 	</header>
 	<footer>
-		footer
+		<!-- footer -->
 	</footer>
 </body>
 
