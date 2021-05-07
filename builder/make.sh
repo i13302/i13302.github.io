@@ -72,7 +72,8 @@ function empty(){
 cd page
 if [ type -a $@ >/dev/null 2>&1 ]
 then
-	help
-else
 	$@
+else
+	help
+	echo type -a $@ "is" $?
 fi
