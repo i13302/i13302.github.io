@@ -60,6 +60,7 @@ function create(){
 function help(){
 	echo 'help function'
 	echo 'Usage:'
+	cat `dirname $0`$0 | grep -E '^function' -B 1 | sed 's/^function\s//g'
 }
 
 function empty(){
