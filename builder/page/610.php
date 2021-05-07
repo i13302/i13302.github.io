@@ -40,6 +40,13 @@
 				<li><span class=mgright>(学部3年対象)</span><a target='_blank' href='https://www2.st.kagawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2020&lct_cd=5005140'>情報セキュリティII</a></li>
 				<li><span class=mgright>(学部3年対象)</span><a target='_blank' href='https://www2.st.kagawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2020&lct_cd=5005150'>情報セキュリティ演習</a></li>
 			</ul>
+			<h2 class=buttom0>2021年度(香川大学)</h2>
+			<ul class=tb00>
+				<li><span class=mgright>(学部1年対象)</span><a target='_blank' href='https://www2.st.kagawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2021&lct_cd=5000533'>プログラミング (情シス・通信)</a></li>
+				<li><span class=mgright>(学部3年対象)</span><a target='_blank' href='https://www2.st.kagawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2021&lct_cd=5005310'>情報システム・セキュリティ実験I</a></li>
+				<li><span class=mgright>(学部3年対象)</span><a target='_blank' href='https://www2.st.kagawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2021&lct_cd=5005140'>情報セキュリティII</a></li>
+				<li><span class=mgright>(学部3年対象)</span><a target='_blank' href='https://www2.st.kagawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2021&lct_cd=5005150'>情報セキュリティ演習</a></li>
+			</ul>
 			</section>
 		</article>
 	</div>
