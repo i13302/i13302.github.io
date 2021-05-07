@@ -69,9 +69,9 @@ function empty(){
 
 # echo $PAGEFILE
 cd page
-if [ type -a "$@" >/dev/null 2>&1 ]
+if [ type -a $@ >/dev/null 2>&1 ]
 then
-	$@
-else
 	help
+else
+	$@
 fi
