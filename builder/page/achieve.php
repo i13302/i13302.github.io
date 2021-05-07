@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<?php include('./parts/head.php'); load_head('実績一覧');?>
+<?php include('./parts/head.php'); load_head('学術実績');?>
 </head>
 
 <body>
