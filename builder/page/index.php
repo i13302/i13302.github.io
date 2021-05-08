@@ -72,7 +72,7 @@
 				</table>
 				<h2>GitHubの活動状況</h2>
 				<img src='https://github-profile-trophy.vercel.app/?username=i13302'><br>
-				<img src='https://github-readme-stats.vercel.app/api?username=i13302&show_icons=true'>
+				<img src='https://github-readme-stats.vercel.app/api?username=i13302&show_icons=true&count_private=true&include_all_commits=true'>
 				<img src='https://github-readme-stats.vercel.app/api/top-langs/?username=i13302&layout=compact'>
 				<hr>
 			</section>
