@@ -13,15 +13,15 @@ jobs:
     uses: actions/checkout@master
   - name: Setup PHP 7.3
     uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.3'
+    with:
+      php-version: '7.3'
   - name: Build PHP Files
     run: cd builder && ./make.sh build
   - name: git settings
     run: |
       git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    - name: Push changes
+      git config --local user.name "GitHub Action"
+  - name: Push changes
     uses: ad-m/github-push-action@master
     with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
