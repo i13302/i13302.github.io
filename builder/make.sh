@@ -22,7 +22,7 @@ function clean(){
 	done
 }
 
-# 新しいページファイルの生成
+# 新しいページファイルの生成 $filename
 function newfile(){
 	cp parts/_template.php $1.php
 	echo $1 >> $ROOTPATH/builder/files.txt
