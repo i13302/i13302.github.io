@@ -2,7 +2,6 @@
 	display: -webkit-flex;
 	display: flex;
 	max-width: 1100px;
-	margin-top: -10px;
 	margin-bottom: -10px;
 	box-sizing: border-box；
 }
@@ -35,8 +34,8 @@ article{
 	margin: 0 auto;
 	min-width: 900px;
 	margin-left: 5px;
-	padding-left: 1em;
 	margin-right: 5px;
+	padding-left: 1em;
 	padding-right: 1em;
 	background-color: #EFEFEF;
 }
