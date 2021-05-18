@@ -57,6 +57,7 @@ pre.overx{
 	white-space: pre-wrap ;
 	background:#f0f0f0;;
 	width: 100vh;
+	overflow: auto; 
 }
 
 ul.tb00{
