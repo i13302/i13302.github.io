@@ -1,0 +1,92 @@
+body{
+	margin: 0 auto;
+	background-color: #0b633f;
+	max-width: 1200px;
+	
+	font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+}
+
+@media screen and (max-width:900px) { 
+	body{
+		padding-top: 3em;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.center{
+	text-align: center;
+}
+
+.left{
+	text-align: left;;
+}
+
+.pad1em{
+	padding-left:1em;
+	padding-right:1em;
+}
+
+.bodyfull{
+	width:95%;
+}
+
+.yokonarabi{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+}
+
+.kuuhaku100{
+	width: 100px;
+}
+
+iframe.iframe_kotei{
+	display: flex;
+	position: fixed;
+	padding: 10px;
+	background: #fff;
+}
+
+.anchor{
+	display: block;
+	padding-top: 70px;
+	margin-top: -70px;
+}
+
+h1,h2,h3,h4{
+	margin-left: -15px;
+}
+
+h4{
+	counter-increment: h4number;
+}
+h4::before{
+	content: "["counter(h4number)"] ";
+}
+
+h3{
+	counter-increment: h3number;
+	counter-reset: h4number;
+}
+h3::before{
+	content:counter(h2number)"-" counter(h3number)". ";
+}
+
+h2{
+	counter-increment: h2number;
+	counter-reset: h3number;
+}
+h2::before{
+	content:counter(h2number)". ";
+}
+
+
+img{
+	max-width: 70%;
+	max-height: 50%;
+}
+
+p{
+	letter-spacing: normal;
+}

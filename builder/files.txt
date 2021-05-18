@@ -1,3 +1,5 @@
 index	トップページ
-achieve	実績一覧
-project	開発物
+achieve	学術実績
+610	TA実績
+project	制作物
+30808	SLPアドカレ2020

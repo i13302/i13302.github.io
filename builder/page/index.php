@@ -31,7 +31,7 @@
 						<td>外部公開</td>
 						<td><a href='https://github.com/i13302'>GitHub</a> , <a
 								href='https://researchmap.jp/itakehara'>Researchmap</a> , <a
-								href='https://www.facebook.com/pikachu.raichyu'>Fecebook</a></td>
+								href='https://www.facebook.com/pikachu.raichyu'>Facebook</a></td>
 					</tr>
 				</table>
 				<hr>
@@ -70,44 +70,20 @@
 						<td class=left>最所研究室</td>
 					</tr>
 				</table>
-				<h2>TA担当科目</h2>
-				<h3 class=bottom0>2016年度(香川高専)</h3>
-				<ul class=tb00>
-					<li><span class=mgright>(高専2年対象)</span>基礎工学実験・実習</li>
-				</ul>
-				<h3 class=bottom0>2017年度(香川高専)</h3>
-				<ul class=tb00>
-					<li><span class=mgright>(高専2年対象)</span>基礎工学実験・実習</li>
-				</ul>
-				<h3 class=bottom0>2018年度(香川大学)</h3>
-				<ul class=tb00>
-					<li><span class=mgright>(学部1年対象)</span>プログラミング (情シス・通信)</li>
-					<li><span class=mgright>(学部2年対象)</span>電子・情報工学プログラミング</li>
-				</ul>
-				<h3 class=bottom0>2019年度(香川大学)</h3>
-				<ul class=tb00>
-					<li><span class=mgright>(学部2年対象)</span>中級プログラミング</li>
-					<li><span class=mgright>(学部3年対象)</span>情報環境実験I</li>
-				</ul>
-				<h3 class=bottom0>2020年度(香川大学)</h3>
-				<ul class=tb00>
-					<li><span class=mgright>(学部1年対象)</span>プログラミング (情シス・通信)</li>
-					<li><span class=mgright>(学部2年対象)</span>中級プログラミング</li>
-					<li><span class=mgright>(学部2年対象)</span>アルゴリズム演習</li>
-					<li><span class=mgright>(学部3年対象)</span>情報システム・セキュリティ実験I</li>
-					<li><span class=mgright>(学部3年対象)</span>情報システム・セキュリティ実験II</li>
-					<li><span class=mgright>(学部3年対象)</span>情報セキュリティII</li>
-					<li><span class=mgright>(学部3年対象)</span>情報セキュリティ演習</li>
-				</ul>
+				<h2>GitHubの活動状況</h2>
+				<img src='https://grass-graph.moshimo.works/images/i13302.png'><br>
+				<img src='https://github-profile-trophy.vercel.app/?username=i13302'><br>
+				<img src='https://github-readme-stats.vercel.app/api?username=i13302&show_icons=true&count_private=true&include_all_commits=true'>
+				<img src='https://github-readme-stats.vercel.app/api/top-langs/?username=i13302&layout=compact'>
 				<hr>
 			</section>
 		</article>
 	</div>
 	<header>
-		header
+		<!-- header -->
 	</header>
 	<footer>
-		footer
+		<!-- footer -->
 	</footer>
 </body>
 

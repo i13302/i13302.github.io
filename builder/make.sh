@@ -7,9 +7,10 @@ ROOTPATH='../..'
 
 # PHPファイルを基にHTMLファイルを生成
 function build(){
+	mkdir -p $ROOTPATH/docs
 	for pf in ${PAGEFILE[@]}
 	do
-		php $pf.php > $ROOTPATH/$pf.html 
+		php $pf.php > $ROOTPATH/docs/$pf.html 
 	done
 }
 
@@ -17,7 +18,7 @@ function build(){
 function clean(){
 	for pf in ${PAGEFILE[@]}
 	do
-		mv $ROOTPATH/$pf.html `mktemp`
+		mv $ROOTPATH/docs/$pf.html `mktemp`
 	done
 }
 
@@ -27,6 +28,21 @@ function newfile(){
 	echo $1 >> $ROOTPATH/builder/files.txt
 }
 
+# 目次を生成
+function tof(){
+	mkdir -p parts/table_of_contents
+	echo '<ol>' > parts/table_of_contents/$1.php
+	for _h2 in $(cat $1.php |\
+		grep -i '<h2>' |\
+		sed -e 's/<[^>]*>//g' |\
+		sed -e 's/\t*//g')
+	do
+		echo '<li>'$_h2'</li>' >> parts/table_of_contents/$1.php
+	done
+	echo '</ol>' >> parts/table_of_contents/$1.php
+}
+
+# create nav ... navを生成
 function create(){
 	if [ $1 == nav ]
 	then 
@@ -38,6 +54,17 @@ function create(){
 		echo '</ul></nav>' >> $ROOTPATH/builder/page/parts/nav.php
 	fi
 	
+}
+
+# help
+function help(){
+	echo 'help function'
+	echo 'Usage:'
+	cat `dirname $0`$0 | grep -E '^function' -B 1 | sed 's/^function\s//g'
+}
+
+function empty(){
+	echo 'empty function for test.'
 }
 
 
