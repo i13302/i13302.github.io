@@ -88,12 +88,12 @@
 				<h2>授業資料</h2>
 				<h3 class=bottom0>2021年度情報システム・セキュリティ実験I</h3>
 				<ol>
-					<li><a target='_blank' href='./doc/01_Install-Linux.pdf'>仮想マシンへのLinux(CentOS 7)のインストール手順</a></li>
-					<li><a target='_blank' href='./doc/02_SSH.pdf'>SSHの手順と注意事項</a></li>
-					<li><a target='_blank' href='./doc/03_how-to-vi.pdf'>viの使い方</a></li>
-					<li><a target='_blank' href='./doc/04_env-script_20G470.pdf'>シェルスクリプトの特徴とデバッグ</a></li>
-					<li><a target='_blank' href='./doc/05_MakefileMacro_20G470.pdf'>Makefileを使ったテスト</a></li>
-					<li><a target='_blank' href='./doc/06_Time-System_20G470.pdf'>Forkの特徴</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/01_Install-Linux.pdf'>仮想マシンへのLinux(CentOS 7)のインストール手順</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/02_SSH.pdf'>SSHの手順と注意事項</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/03_how-to-vi.pdf'>viの使い方</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/04_env-script_20G470.pdf'>シェルスクリプトの特徴とデバッグ</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/05_MakefileMacro_20G470.pdf'>Makefileを使ったテスト</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/06_Time-System_20G470.pdf'>Forkの特徴</a></li>
 				</ol>
 				<hr>
 			</section>
