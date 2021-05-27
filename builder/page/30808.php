@@ -103,7 +103,7 @@
 					<li>GitがマージしてActionsがPassしているので安全！</li>
 					<li>Actionsで勝手にビルドして提出！</li>
 				</ol>
-				<img src='./pic/30808/actions.png'>
+				<img src='./pic/30808/actions.png' alt='GitHub Actions'>
 				
 				<p>さあ，皆さんも論文執筆を頑張りましょう！</p>
 				
@@ -116,19 +116,19 @@
 				執筆のcommitに一区切りが付くとpushします．<br>
 				pushするとActionsが作動し，ビルドします．<br>
 				これにより執筆ブランチ毎のビルドの可否が担保されます．</p>
-				<img src='./pic/30808/branch_chap.png'>
+				<img src='./pic/30808/branch_chap.png' alt='GitHub Branch Chaps'>
 				
 				<h3>結合</h3>
 				<p>結合ブランチ(<code class=word>develop</code>)にて各章を結合する．<br>
 				Actionsが1つの論文の固まりとして，ビルドします．<br>
 				論文としてPDFが生成できることが担保されます．</p>
-				<img src='./pic/30808/branch_develop.png'>
+				<img src='./pic/30808/branch_develop.png' alt='GItHub Branch develop'>
 				
 				<h3>提出</h3>
 				<p>提出ブランチ(<code class=word>master</code>)にて提出用のPDFを生成する．<br>
 				Actionsがビルドした結果をReleaseとして公開してくれます．<br>
 				指導教員に提出するときは，GitHubのRelease画面からPDFをダウンロードして，メールなりSlackなりで提出するだけです．</p>
-				<img src='./pic/30808/release.png'>
+				<img src='./pic/30808/release.png' alt='GitHub Releases'>
 				
 				<span class=sred>
 					<span class=black>
