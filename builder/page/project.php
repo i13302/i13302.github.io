@@ -5,7 +5,7 @@
 <?php include('./parts/head.php'); load_head('開発物');?>
 <?php
 	function project($user,$repo){
-		return '<div class=object><a target=\'_blank\' href=\'https://github.com/'.$user.'/'.$repo.'\'><img src=\'https://github-readme-stats.vercel.app/api/pin/?username='.$user.'&repo='.$repo.'\'></a></div>';
+		return '<div class=object><a target=\'_blank\' href=\'https://github.com/'.$user.'/'.$repo.'\'><img src=\'https://github-readme-stats.vercel.app/api/pin/?username='.$user.'&repo='.$repo.'\' alt=\'GitHub '.$repo.'\'></a></div>';
 	}
 ?>
 </head>
