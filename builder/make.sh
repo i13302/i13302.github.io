@@ -47,10 +47,8 @@ function create(){
 	if [ $1 == nav ]
 	then 
 		echo '<nav><ul>' > $ROOTPATH/builder/page/parts/nav.php
-		for i in `seq 0 $(expr ${#PAGEFILE[@]} - 1)`
-		do
-			echo '<li><a href='${PAGEFILE[$i]}'.html>'${PAGETITLE[$i]}'</a></li>' >> $ROOTPATH/builder/page/parts/nav.php
-		done
+		#echo "$FILESDATA"|  awk '{print "'\<li\>\<'a href='\''"$1"''.html'\'\>'"$2"'\<''\/'a>\<\/li\>" }' >> $ROOTPATH/builder/page/parts/nav.php
+		echo "$FILESDATA"|  awk '{print "'\<li\>\<'a href="$1"''.html'\>'"$2"'\<''\/'a>\<\/li\>" }' >> $ROOTPATH/builder/page/parts/nav.php
 		echo '</ul></nav>' >> $ROOTPATH/builder/page/parts/nav.php
 	fi
 	
