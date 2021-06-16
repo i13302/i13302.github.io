@@ -113,6 +113,7 @@
 					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/04_env-script_20G470.pdf'>シェルスクリプトの特徴とデバッグ</a></li>
 					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/05_MakefileMacro_20G470.pdf'>Makefileを使ったテスト</a></li>
 					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/06_Time-System_20G470.pdf'>Forkの特徴</a></li>
+					<li><a target='_blank' href='./doc/2021/CSSS-EXP-1/07_Jupyter-Install.pdf'>Jupyterのインストール手順</a></li>
 				</ol>
 				<hr>
 			</section>
