@@ -22,7 +22,7 @@
 						</tr>
 						<tr>
 							<td>所属</td>
-							<td>香川大学大学院 工学研究科 信頼性情報システム工学専攻 <a href='https://air.eng.kagawa-u.ac.jp/'>最所研究室</a> M1</td>
+							<td>香川大学大学院 工学研究科 信頼性情報システム工学専攻 <a href='https://air.eng.kagawa-u.ac.jp/'>最所研究室</a> M2</td>
 						</tr>
 						<tr>
 							<td>メールアドレス</td>
@@ -73,7 +73,7 @@
 					</tr>
 				</table>
 				<h2>GitHubの活動状況</h2>
-				<img src='https://grass-graph.moshimo.works/images/i13302.png' alt='GitHub Works'><br>
+				<img src='https://grass-graph.appspot.com/images/i13302.png' alt='GitHub Works'><br>
 				<img src='https://github-profile-trophy.vercel.app/?username=i13302' alt='GitHub Trophy'><br>
 				<img src='https://github-readme-stats.vercel.app/api?username=i13302&show_icons=true&count_private=true&include_all_commits=true' alt='GitHub Stats'>
 				<img src='https://github-readme-stats.vercel.app/api/top-langs/?username=i13302&layout=compact' alt='GitHub Language'>
