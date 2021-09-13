@@ -314,6 +314,10 @@ curl -H "Authorization: token $GITHUB_TOKEN" -X POST https://uploads.github.com/
 			</section>
 		</article>
 	</div>
+	<header>
+	</header>
+	<footer>
+	</footer>
 </body>
 
 </html>

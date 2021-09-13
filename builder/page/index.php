@@ -82,7 +82,7 @@
 		</article>
 	</div>
 	<header>
-		<!-- header -->
+<?php include('./parts/counter.php'); access_counter();?>
 	</header>
 	<footer>
 		<!-- footer -->

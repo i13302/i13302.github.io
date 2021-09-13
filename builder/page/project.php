@@ -27,10 +27,8 @@
 		</article>
 	</div>
 	<header>
-		header
 	</header>
 	<footer>
-		footer
 	</footer>
 </body>
 
