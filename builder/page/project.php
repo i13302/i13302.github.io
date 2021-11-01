@@ -21,6 +21,8 @@
 				<?= project('i13302','learn'); ?>
 				<?= project('i13302','JapLaTexImage'); ?>
 				<?= project('i13302','latex-actions'); ?>
+				<?= project('i13302','printout'); ?>
+				<?= project('i13302','printout-template'); ?>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<hr>
 			</section>
