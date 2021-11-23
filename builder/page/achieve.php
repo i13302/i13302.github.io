@@ -104,6 +104,12 @@
 					<li><span class=me>竹原一駿</span>, 小松聖矢, 宮川慎也. NTTCom賞, 沖縄オープンラボラトリ, ミニプログラミングコンテスト.</li>
 					<li><span class=me>竹原一駿</span>, 小松聖矢, 宮川慎也. Cisco賞, 沖縄オープンラボラトリ, プログラミングコンテスト.</li>
 				</ul>
+				
+				<h3 class=bottom0>2021年度</h3>
+				<ul class=tb00>
+					<li><span class=me>竹原一駿</span>, 参加, <a href='https://www.security-camp.or.jp/minicamp/online2021.html'>セキュリティ・ミニキャンプ オンライン 2021</a>.</li>
+				</ul>
+				
 				<h2>授業資料</h2>
 				<h3 class=bottom0>2020年度情報システム・セキュリティ実験I</h3>
 				<ol>
